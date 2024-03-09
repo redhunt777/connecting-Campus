@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Newsroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button type="button" class="btn btn-outline-light btn-lg" style="margin-top: 20px; margin-left: 90%;">Home</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header"><h4><b>Upload news: </b></h4></div>
+                    <div class="card-body">
+                        <form id="newsForm">
+                            <div class="form-group">
+                                <label for="title"><h6>News title:</h6></label>
+                                <input type="text" class="form-control" id="title" placeholder="Enter item title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description"><h6>News description:</h6></label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Enter item description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="image"><h6>Upload Image:</h6></label>
+                                <input type="file" class="form-control-file" id="image" required>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Publish news</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const fd=new FormData(form);
+             const obj = Object.fromEntries(fd);
+             const json = JSON.stringify(obj);
+             localStorage.setItem('form',json);
+             window.location.href="http://localhost:5173/";
+        });
+    </script>
+</body>
+</html>

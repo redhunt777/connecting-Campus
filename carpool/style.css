@@ -1,0 +1,9 @@
+body {
+    background-image: url("bgimg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 50px;
+}

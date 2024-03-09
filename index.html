@@ -2,12 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Estate</title>
+    <title>Connecting Campus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body>  <!-- Use firebase app and database. -->
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script defer type="module" src="/src/main.jsx"></script>
+    <script defer src="./src/readfromdatabase.js"></script>
   </body>
 </html>
